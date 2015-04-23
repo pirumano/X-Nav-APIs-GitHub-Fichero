@@ -21,7 +21,7 @@
   if (typeof exports !== 'undefined') {
       XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
       _ = require('underscore');
-      var btoa = require('btoa'); //jshint ignore:line
+      btoa = require('btoa'); //jshint ignore:line
   } else { 
       _ = window._; 
   }
@@ -406,7 +406,7 @@
             "encoding": "utf-8"
           };
         } else {
-          	content = {
+            content = {
               "content": btoa(String.fromCharCode.apply(null, new Uint8Array(content))),
               "encoding": "base64"
             };
